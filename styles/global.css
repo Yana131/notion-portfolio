@@ -161,3 +161,11 @@ color: #1f1f1f;
   margin-left: 0 !important;
   margin-right: auto !important;
 }
+.notion-page-icon-hero {
+    margin-left: 0 !important;
+    margin-right: auto !important;
+}
+
+.notion-page-icon-hero + h1 {
+    margin-top: 24px;
+}
