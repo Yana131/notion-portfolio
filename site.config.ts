@@ -51,5 +51,5 @@ export default siteConfig({
   // important pages. To use `navigationLinks`, set `navigationStyle` to `custom`.
   navigationStyle: 'custom',
   // navigationStyle: 'custom',
-  navigationLinks: null,
+  navigationLinks: [],
 })
