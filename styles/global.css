@@ -107,3 +107,12 @@ color: #1f1f1f;
   border-radius: 20px !important;
   overflow: hidden !important;
 }
+/* убрать верхний header */
+.notion-header {
+  display: none !important;
+}
+
+/* убрать github corner */
+.github-corner {
+  display: none !important;
+}
