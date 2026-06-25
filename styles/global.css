@@ -94,3 +94,9 @@ color: #1f1f1f;
 .notion-page-title-text {
   display: none !important;
 }
+.searchInput,
+.search-button,
+.notion-search,
+.notion-search-button {
+  display: none !important;
+}
