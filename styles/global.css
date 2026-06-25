@@ -169,3 +169,10 @@ color: #1f1f1f;
 .notion-page-icon-hero + h1 {
     margin-top: 24px;
 }
+.notion-page-icon-hero {
+    position: static !important;
+    left: auto !important;
+    justify-content: flex-start !important;
+    display: flex !important;
+    width: fit-content !important;
+}
