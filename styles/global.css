@@ -122,3 +122,22 @@ color: #1f1f1f;
     box-shadow: none !important;
     filter: none !important;
 }
+/* убрать тень у аватара */
+.notion-page-icon,
+.notion-page-icon img {
+  box-shadow: none !important;
+  filter: none !important;
+}
+
+/* вернуть заголовок и аватар влево */
+.notion-page-icon,
+.notion-title,
+.notion-title-text {
+  margin-left: 0 !important;
+  margin-right: auto !important;
+  text-align: left !important;
+}
+
+.notion-page {
+  text-align: left !important;
+}
