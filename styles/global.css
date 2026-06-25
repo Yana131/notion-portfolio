@@ -151,3 +151,13 @@ color: #1f1f1f;
   filter: none !important;
   border: none !important;
 }
+.notion-page-icon {
+  margin-left: 0 !important;
+  margin-right: auto !important;
+  display: block !important;
+}
+
+.notion-page-icon-image {
+  margin-left: 0 !important;
+  margin-right: auto !important;
+}
