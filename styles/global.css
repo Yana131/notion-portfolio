@@ -85,3 +85,9 @@ color: #1f1f1f;
 .notion a:hover {
   color: #E07D12 !important;
 }
+.search {
+  display: none !important;
+}
+.github-corner {
+  display: none !important;
+}
