@@ -141,3 +141,13 @@ color: #1f1f1f;
 .notion-page {
   text-align: left !important;
 }
+/* аватар */
+.notion-page-icon,
+.notion-page-icon img,
+.notion-page-icon span,
+.notion-page-icon-image {
+  background: transparent !important;
+  box-shadow: none !important;
+  filter: none !important;
+  border: none !important;
+}
