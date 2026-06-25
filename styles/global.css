@@ -78,3 +78,10 @@ color: #1f1f1f;
 .notion * {
   color: #1D1D1D !important;
 }
+.notion a {
+  color: #F38B18 !important;
+}
+
+.notion a:hover {
+  color: #E07D12 !important;
+}
