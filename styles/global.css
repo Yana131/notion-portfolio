@@ -62,3 +62,18 @@ color: #1f1f1f;
 ::-webkit-scrollbar-track {           
     background-color: var(--bg-color);
 }
+.notion {
+  background: #ffffff !important;
+}
+
+.notion-frame {
+  background: #ffffff !important;
+}
+
+.notion-app {
+  background: #ffffff !important;
+}
+
+.notion-page {
+  background: #ffffff !important;
+}
