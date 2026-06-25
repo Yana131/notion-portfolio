@@ -116,3 +116,9 @@ color: #1f1f1f;
 .github-corner {
   display: none !important;
 }
+/* убрать тень у аватара */
+.notion-page-icon img,
+.notion-page-icon {
+    box-shadow: none !important;
+    filter: none !important;
+}
