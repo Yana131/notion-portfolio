@@ -71,3 +71,10 @@ color: #1f1f1f;
 .notion-page {
   background: transparent !important;
 }
+.notion {
+  color: #1D1D1D !important;
+}
+
+.notion * {
+  color: #1D1D1D !important;
+}
