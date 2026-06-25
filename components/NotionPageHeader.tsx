@@ -81,7 +81,7 @@ export function NotionPageHeader({
 
           <ToggleThemeButton />
 
-          {isSearchEnabled && <Search block={block} title={null} />}
+         {/* search hidden */}
         </div>
       </div>
     </header>
