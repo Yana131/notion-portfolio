@@ -96,14 +96,14 @@ span.notion-gray {
   color: #e3e3e3 !important;
 }
 
-/* Серый цвет для строки B2B, B2C, FoodTech */
+/* строка B2B, B2C, FoodTech */
 .notion-page-content > article > div:nth-of-type(3),
 .notion-page-content > article > div:nth-of-type(3) * {
   color: #8a8f98 !important;
 }
 
 /* ===============================
-   HIDE DEFAULT NOTION ELEMENTS
+   HIDE DEFAULT ELEMENTS
 ================================ */
 .search,
 .github-corner,
@@ -161,62 +161,43 @@ span.notion-gray {
 }
 
 /* ===============================
-   TYPOGRAPHY / PAGE RHYTHM
+   TYPOGRAPHY RHYTHM
+   Важно: НЕ задаем margin для article > *
 ================================ */
-
-/* Обычные строки текста держим компактно.
-   Это важно для списков ролей, навигации и коротких строк. */
 .notion-page-content .notion-text {
   margin-top: 0 !important;
-  margin-bottom: 2px !important;
+  margin-bottom: 4px !important;
+  line-height: 1.65 !important;
 }
 
-/* Несколько текстовых строк подряд — без лишних дыр. */
 .notion-page-content .notion-text + .notion-text {
   margin-top: 0 !important;
 }
 
-/* Заголовки создают основные отступы между разделами. */
-.notion-page-content h1 {
-  margin-top: 48px !important;
-  margin-bottom: 18px !important;
-}
-
+.notion-page-content h1,
 .notion-page-content h2 {
-  margin-top: 42px !important;
+  margin-top: 44px !important;
   margin-bottom: 16px !important;
+  line-height: 1.15 !important;
 }
 
 .notion-page-content h3 {
   margin-top: 28px !important;
   margin-bottom: 10px !important;
+  line-height: 1.25 !important;
 }
 
-/* Первый заголовок на странице не должен отъезжать вниз. */
-.notion-page-content article > h1:first-child,
-.notion-page-content article > h2:first-child,
-.notion-page-content article > h3:first-child {
+.notion-page-content h1:first-child,
+.notion-page-content h2:first-child {
   margin-top: 0 !important;
 }
 
-/* Ссылки-якоря в навигации компактнее. */
-.notion-page-content a,
-.notion-page-content .notion-link {
-  margin-top: 0 !important;
-  margin-bottom: 0 !important;
-}
-
-.notion-page-content .notion-text:has(a) {
-  margin-top: 1px !important;
-  margin-bottom: 1px !important;
-  padding-top: 0 !important;
-  padding-bottom: 0 !important;
-}
-
-/* Пустые блоки Notion не раздувают страницу. */
+/* Пустые блоки Notion: не удаляем, а сжимаем */
 .notion-blank {
-  min-height: 4px !important;
-  height: 4px !important;
+  height: 6px !important;
+  min-height: 6px !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 /* ===============================
@@ -224,50 +205,23 @@ span.notion-gray {
 ================================ */
 .notion-page-content ul,
 .notion-page-content ol {
-  margin-top: 6px !important;
-  margin-bottom: 12px !important;
+  margin-top: 8px !important;
+  margin-bottom: 16px !important;
   padding-left: 22px !important;
 }
 
 .notion-page-content li {
-  margin-top: 2px !important;
-  margin-bottom: 2px !important;
+  margin-top: 0 !important;
+  margin-bottom: 4px !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  line-height: 1.6 !important;
 }
 
+.notion-page-content li > div,
 .notion-page-content li .notion-text {
   margin-top: 0 !important;
   margin-bottom: 0 !important;
-}
-
-/* ===============================
-   CALLOUTS / CARDS
-================================ */
-.notion-callout {
-  margin: 6px 0 !important;
-  padding: 10px 12px !important;
-  border-radius: 12px !important;
-}
-
-.notion-callout + .notion-callout {
-  margin-top: 4px !important;
-}
-
-.notion-callout + .notion-blank {
-  display: none !important;
-}
-
-/* ===============================
-   TOGGLES
-================================ */
-.notion-toggle {
-  margin-top: 7px !important;
-  margin-bottom: 7px !important;
-  padding-top: 2px !important;
-  padding-bottom: 2px !important;
-}
-
-.notion-toggle + .notion-toggle {
-  margin-top: 5px !important;
 }
 
 /* ===============================
@@ -291,8 +245,8 @@ span.notion-gray {
 .notion-page-content .notion-image,
 .notion-page-content .notion-asset-wrapper,
 .notion-page-content figure {
-  margin-top: 10px !important;
-  margin-bottom: 12px !important;
+  margin-top: 12px !important;
+  margin-bottom: 14px !important;
   transition: transform 0.25s ease, opacity 0.25s ease;
 }
 
@@ -305,7 +259,55 @@ span.notion-gray {
 }
 
 /* ===============================
-   STATIC EMBEDS
+   CALLOUTS / CARDS
+================================ */
+.notion-callout {
+  margin-top: 6px !important;
+  margin-bottom: 6px !important;
+  padding: 10px 12px !important;
+  border-radius: 14px !important;
+}
+
+.notion-callout + .notion-callout {
+  margin-top: 4px !important;
+}
+
+.notion-callout + .notion-blank {
+  display: none !important;
+}
+
+/* ===============================
+   TOGGLES
+================================ */
+.notion-toggle {
+  margin-top: 8px !important;
+  margin-bottom: 8px !important;
+  padding-top: 3px !important;
+  padding-bottom: 3px !important;
+}
+
+.notion-toggle + .notion-toggle {
+  margin-top: 6px !important;
+}
+
+/* ===============================
+   NAVIGATION LINKS IN CASES
+================================ */
+.notion-page-content a,
+.notion-page-content .notion-link {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.notion-page-content .notion-text:has(a) {
+  margin-top: 2px !important;
+  margin-bottom: 2px !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+/* ===============================
+   TWEETS / STATIC EMBEDS
 ================================ */
 .static-tweet blockquote {
   margin: 0;
@@ -366,23 +368,30 @@ span.notion-gray {
   }
 
   .notion-page-content .notion-text {
-    margin-top: 0 !important;
-    margin-bottom: 2px !important;
+    margin-bottom: 3px !important;
+    line-height: 1.6 !important;
   }
 
-  .notion-page-content h1 {
-    margin-top: 38px !important;
-    margin-bottom: 14px !important;
-  }
-
+  .notion-page-content h1,
   .notion-page-content h2 {
     margin-top: 34px !important;
-    margin-bottom: 12px !important;
+    margin-bottom: 14px !important;
   }
 
   .notion-page-content h3 {
     margin-top: 24px !important;
-    margin-bottom: 8px !important;
+    margin-bottom: 10px !important;
+  }
+
+  .notion-page-content ul,
+  .notion-page-content ol {
+    margin-top: 6px !important;
+    margin-bottom: 12px !important;
+    padding-left: 20px !important;
+  }
+
+  .notion-page-content li {
+    margin-bottom: 3px !important;
   }
 
   .notion-page-content .notion-image,
@@ -394,7 +403,8 @@ span.notion-gray {
   }
 
   .notion-callout {
-    margin: 4px 0 !important;
+    margin-top: 4px !important;
+    margin-bottom: 4px !important;
     padding: 9px 11px !important;
   }
 
@@ -404,25 +414,7 @@ span.notion-gray {
   }
 
   .notion-blank {
-    min-height: 3px !important;
-    height: 3px !important;
+    height: 4px !important;
+    min-height: 4px !important;
   }
-}
-/* Компактные списки в кейсах */
-.notion-page-content ul,
-.notion-page-content ol {
-  margin: 8px 0 !important;
-  padding-left: 22px !important;
-}
-
-.notion-page-content li {
-  margin: 2px 0 !important;
-  padding: 0 !important;
-  line-height: 1.6 !important;
-}
-
-/* Если внутри li лежит блок Notion, убираем его отступы */
-.notion-page-content li > div,
-.notion-page-content li .notion-text {
-  margin: 0 !important;
 }
