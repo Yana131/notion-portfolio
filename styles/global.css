@@ -289,3 +289,10 @@ span.notion-gray {
 .notion-gallery-grid {
   gap: 8px !important;
 }
+/* Уменьшаем вертикальный отступ между изображениями */
+.notion-image,
+.notion-asset-wrapper,
+.notion-page-content .notion-image {
+  margin-top: 8px !important;
+  margin-bottom: 8px !important;
+}
