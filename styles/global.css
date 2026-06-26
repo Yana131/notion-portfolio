@@ -1,4 +1,205 @@
-/* Навигация в кейсе — убираем лишний воздух между ссылками */
+/* ===============================
+   BASE
+================================ */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  background: #ffffff;
+  color: #1d1d1d;
+  --notion-font: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+    'Droid Sans', 'Helvetica Neue', 'Noto Sans', sans-serif;
+  font-family: var(--notion-font);
+}
+
+a,
+a:link,
+a:visited,
+a:hover,
+a:active,
+a:focus,
+a:focus-visible,
+.notion a,
+.notion-page a {
+  color: inherit;
+  text-decoration: none !important;
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent !important;
+}
+
+/* ===============================
+   SCROLLBAR
+================================ */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  background-color: var(--bg-color-1, #f5f5f5);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+  background-color: var(--fg-color-1, #555);
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--bg-color, #ffffff);
+}
+
+/* ===============================
+   NOTION BASE
+================================ */
+.notion,
+.notion-app,
+.notion-frame {
+  background: #ffffff !important;
+}
+
+.notion-page {
+  background: transparent !important;
+  text-align: left !important;
+}
+
+.notion,
+.notion * {
+  color: #1d1d1d !important;
+}
+
+.notion a {
+  color: #f38b18 !important;
+}
+
+.notion a:hover {
+  color: #e07d12 !important;
+}
+
+.notion-gray,
+.notion .notion-gray,
+.notion-page .notion-gray,
+.notion-text .notion-gray,
+span.notion-gray {
+  color: #8b8b8b !important;
+}
+
+.notion-blue {
+  color: #e3e3e3 !important;
+}
+
+/* Серый цвет для строки B2B, B2C, FoodTech */
+.notion-page-content > article > div:nth-of-type(3),
+.notion-page-content > article > div:nth-of-type(3) * {
+  color: #8a8f98 !important;
+}
+
+/* ===============================
+   HIDE DEFAULT NOTION ELEMENTS
+================================ */
+.search,
+.github-corner,
+.searchInput,
+.search-button,
+.notion-search,
+.notion-search-button,
+.notion-page-title-text,
+.notion-header {
+  display: none !important;
+}
+
+/* ===============================
+   AVATAR / HERO ICON
+================================ */
+.notion-page-icon,
+.notion-page-icon img,
+.notion-page-icon span,
+.notion-page-icon-image,
+.notion-page-icon-hero {
+  background: transparent !important;
+  box-shadow: none !important;
+  filter: none !important;
+  border: none !important;
+}
+
+.notion-page-icon,
+.notion-title,
+.notion-title-text,
+.notion-page-icon-image,
+.notion-page-icon-hero {
+  margin-left: 0 !important;
+  margin-right: auto !important;
+  text-align: left !important;
+}
+
+.notion-page-icon-hero {
+  position: static !important;
+  left: auto !important;
+  display: flex !important;
+  justify-content: flex-start !important;
+  width: 124px !important;
+  height: 124px !important;
+  max-width: 124px !important;
+  max-height: 124px !important;
+  margin-bottom: 18px !important;
+}
+
+.notion-page-icon-hero + h1 {
+  margin-top: 24px !important;
+}
+
+.notion-title {
+  margin-top: 0 !important;
+}
+
+/* ===============================
+   TYPOGRAPHY / PAGE RHYTHM
+================================ */
+
+/* Обычные строки текста держим компактно.
+   Это важно для списков ролей, навигации и коротких строк. */
+.notion-page-content .notion-text {
+  margin-top: 0 !important;
+  margin-bottom: 2px !important;
+}
+
+/* Несколько текстовых строк подряд — без лишних дыр. */
+.notion-page-content .notion-text + .notion-text {
+  margin-top: 0 !important;
+}
+
+/* Заголовки создают основные отступы между разделами. */
+.notion-page-content h1 {
+  margin-top: 48px !important;
+  margin-bottom: 18px !important;
+}
+
+.notion-page-content h2 {
+  margin-top: 42px !important;
+  margin-bottom: 16px !important;
+}
+
+.notion-page-content h3 {
+  margin-top: 28px !important;
+  margin-bottom: 10px !important;
+}
+
+/* Первый заголовок на странице не должен отъезжать вниз. */
+.notion-page-content article > h1:first-child,
+.notion-page-content article > h2:first-child,
+.notion-page-content article > h3:first-child {
+  margin-top: 0 !important;
+}
+
+/* Ссылки-якоря в навигации компактнее. */
 .notion-page-content a,
 .notion-page-content .notion-link {
   margin-top: 0 !important;
@@ -6,8 +207,204 @@
 }
 
 .notion-page-content .notion-text:has(a) {
-  margin-top: 2px !important;
-  margin-bottom: 2px !important;
+  margin-top: 1px !important;
+  margin-bottom: 1px !important;
   padding-top: 0 !important;
   padding-bottom: 0 !important;
+}
+
+/* Пустые блоки Notion не раздувают страницу. */
+.notion-blank {
+  min-height: 4px !important;
+  height: 4px !important;
+}
+
+/* ===============================
+   LISTS
+================================ */
+.notion-page-content ul,
+.notion-page-content ol {
+  margin-top: 6px !important;
+  margin-bottom: 12px !important;
+  padding-left: 22px !important;
+}
+
+.notion-page-content li {
+  margin-top: 2px !important;
+  margin-bottom: 2px !important;
+}
+
+.notion-page-content li .notion-text {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+/* ===============================
+   CALLOUTS / CARDS
+================================ */
+.notion-callout {
+  margin: 6px 0 !important;
+  padding: 10px 12px !important;
+  border-radius: 12px !important;
+}
+
+.notion-callout + .notion-callout {
+  margin-top: 4px !important;
+}
+
+.notion-callout + .notion-blank {
+  display: none !important;
+}
+
+/* ===============================
+   TOGGLES
+================================ */
+.notion-toggle {
+  margin-top: 7px !important;
+  margin-bottom: 7px !important;
+  padding-top: 2px !important;
+  padding-bottom: 2px !important;
+}
+
+.notion-toggle + .notion-toggle {
+  margin-top: 5px !important;
+}
+
+/* ===============================
+   IMAGES / GALLERIES
+================================ */
+.notion-asset-wrapper,
+.notion-asset-wrapper-image,
+.notion-image,
+.notion-image img {
+  border-radius: 20px !important;
+  overflow: hidden !important;
+}
+
+.notion-gallery,
+.notion-gallery-grid {
+  gap: 8px !important;
+}
+
+.notion-image,
+.notion-asset-wrapper,
+.notion-page-content .notion-image,
+.notion-page-content .notion-asset-wrapper,
+.notion-page-content figure {
+  margin-top: 10px !important;
+  margin-bottom: 12px !important;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+@media (min-width: 769px) {
+  .notion-page-content .notion-image:hover,
+  .notion-page-content .notion-asset-wrapper:hover,
+  .notion-page-content figure:hover {
+    transform: translateY(-3px);
+  }
+}
+
+/* ===============================
+   STATIC EMBEDS
+================================ */
+.static-tweet blockquote {
+  margin: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+}
+
+.static-tweet-emoji {
+  height: 1.2em !important;
+  width: 1.2em !important;
+}
+
+.searchInput {
+  color: var(--fg-color);
+  caret-color: var(--fg-color);
+}
+
+/* ===============================
+   MOBILE
+================================ */
+@media (max-width: 768px) {
+  .notion-page-icon-hero {
+    width: 104px !important;
+    height: 104px !important;
+    max-width: 104px !important;
+    max-height: 104px !important;
+    margin-bottom: 16px !important;
+  }
+
+  .notion-page-icon-hero img,
+  img.notion-page-icon {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+    object-fit: contain !important;
+  }
+
+  .notion-image,
+  .notion-image img,
+  .notion-asset-wrapper-image,
+  .notion-asset-wrapper,
+  .notion-page img {
+    max-width: 100% !important;
+    width: auto !important;
+    height: auto !important;
+  }
+
+  .notion-asset-wrapper > div[style*="height:320px"] {
+    height: auto !important;
+  }
+
+  .notion-asset-wrapper img {
+    height: auto !important;
+    object-fit: contain !important;
+  }
+
+  .notion-page-content .notion-text {
+    margin-top: 0 !important;
+    margin-bottom: 2px !important;
+  }
+
+  .notion-page-content h1 {
+    margin-top: 38px !important;
+    margin-bottom: 14px !important;
+  }
+
+  .notion-page-content h2 {
+    margin-top: 34px !important;
+    margin-bottom: 12px !important;
+  }
+
+  .notion-page-content h3 {
+    margin-top: 24px !important;
+    margin-bottom: 8px !important;
+  }
+
+  .notion-page-content .notion-image,
+  .notion-page-content .notion-asset-wrapper,
+  .notion-page-content figure {
+    margin-top: 2px !important;
+    margin-bottom: 2px !important;
+    transform: none !important;
+  }
+
+  .notion-callout {
+    margin: 4px 0 !important;
+    padding: 9px 11px !important;
+  }
+
+  .notion-toggle {
+    margin-top: 6px !important;
+    margin-bottom: 6px !important;
+  }
+
+  .notion-blank {
+    min-height: 3px !important;
+    height: 3px !important;
+  }
 }
