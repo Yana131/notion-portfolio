@@ -418,3 +418,31 @@ span.notion-gray {
     min-height: 4px !important;
   }
 }
+/* Только нижняя кнопка "✉ Написать" */
+.notion-page-content a[href*="t.me"]::first-letter {
+  font-size: inherit;
+}
+
+.notion-page-content .notion-text:has(a[href*="t.me"]) {
+  width: fit-content !important;
+}
+
+.notion-page-content .notion-text:has(a[href*="t.me"]) a {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: #263746 !important;
+  color: #ffffff !important;
+  padding: 9px 16px !important;
+  border-radius: 8px !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  line-height: 1 !important;
+  text-decoration: none !important;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.notion-page-content .notion-text:has(a[href*="t.me"]) a:hover {
+  background: #1f2d39 !important;
+  transform: translateY(-1px);
+}
