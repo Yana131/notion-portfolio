@@ -296,3 +296,12 @@ span.notion-gray {
   margin-top: 8px !important;
   margin-bottom: 8px !important;
 }
+/* На телефоне делаем картинки еще ближе друг к другу */
+@media (max-width: 768px) {
+  .notion-page-content .notion-image,
+  .notion-page-content .notion-asset-wrapper,
+  .notion-page-content figure {
+    margin-top: 2px !important;
+    margin-bottom: 2px !important;
+  }
+}
