@@ -348,3 +348,13 @@ html {
     transform: none;
   }
 }
+/* Плашки в разделе "Обо мне" — делаем ближе друг к другу */
+.notion-callout {
+  margin-top: 8px !important;
+  margin-bottom: 8px !important;
+}
+/* Опыт работы — больше расстояния между раскрывающимися пунктами */
+.notion-toggle {
+  margin-top: 8px !important;
+  margin-bottom: 8px !important;
+}
