@@ -214,3 +214,23 @@ a:focus-visible {
 * {
   -webkit-tap-highlight-color: transparent;
 }
+@media (max-width: 768px) {
+  .notion-page-icon-hero,
+  .notion-page-icon-hero img,
+  img.notion-page-icon {
+    width: 72px !important;
+    height: 72px !important;
+    max-width: 72px !important;
+    max-height: 72px !important;
+  }
+}
+@media (max-width: 768px) {
+  .notion-asset-wrapper {
+    margin-top: 16px !important;
+    margin-bottom: 16px !important;
+  }
+
+  .notion-column-list {
+    gap: 16px !important;
+  }
+}
