@@ -226,8 +226,8 @@ a:focus-visible {
 }
 @media (max-width: 768px) {
   .notion-page-icon-hero {
-    width: 96px !important;
-    height: 96px !important;
+    width: 112px !important;
+    height: 112px !important;
     left: 0 !important;
     margin-bottom: 24px !important;
   }
@@ -236,5 +236,15 @@ a:focus-visible {
   .notion-page-icon {
     width: 100% !important;
     height: 100% !important;
+  }
+}
+@media (max-width: 768px) {
+  .notion-asset-wrapper > div[style*="height:320px"] {
+    height: auto !important;
+  }
+
+  .notion-asset-wrapper img {
+    height: auto !important;
+    object-fit: contain !important;
   }
 }
