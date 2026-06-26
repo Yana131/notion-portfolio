@@ -284,3 +284,8 @@ span.notion-gray {
 .notion-gallery-grid {
   gap: 12px !important;
 }
+/* Еще компактнее */
+.notion-gallery,
+.notion-gallery-grid {
+  gap: 8px !important;
+}
