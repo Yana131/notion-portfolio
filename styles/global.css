@@ -305,3 +305,46 @@ span.notion-gray {
     margin-bottom: 2px !important;
   }
 }
+/* Плавность на сайте */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Более аккуратные отступы между текстовыми блоками */
+.notion-page-content .notion-text {
+  margin-top: 4px !important;
+  margin-bottom: 8px !important;
+}
+
+/* Заголовки чуть плотнее к следующему тексту */
+.notion-page-content h1,
+.notion-page-content h2,
+.notion-page-content h3,
+.notion-page-content .notion-header {
+  margin-bottom: 12px !important;
+}
+
+/* Легкая анимация карточек/картинок */
+.notion-page-content .notion-image,
+.notion-page-content .notion-asset-wrapper,
+.notion-page-content figure {
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+/* На ПК — легкое поднятие при наведении */
+@media (min-width: 769px) {
+  .notion-page-content .notion-image:hover,
+  .notion-page-content .notion-asset-wrapper:hover,
+  .notion-page-content figure:hover {
+    transform: translateY(-3px);
+  }
+}
+
+/* На телефоне hover не нужен */
+@media (max-width: 768px) {
+  .notion-page-content .notion-image:hover,
+  .notion-page-content .notion-asset-wrapper:hover,
+  .notion-page-content figure:hover {
+    transform: none;
+  }
+}
