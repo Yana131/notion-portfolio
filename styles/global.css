@@ -301,3 +301,116 @@ span.notion-gray {
     padding: 9px 11px !important;
   }
 }
+/* =========================
+   CASE PAGE — отступы и ритм
+   ========================= */
+
+/* Общий ритм внутри кейсов */
+.notion-page-content article > * {
+  margin-top: 10px !important;
+  margin-bottom: 10px !important;
+}
+
+/* Больше воздуха перед большими разделами */
+.notion-page-content h1,
+.notion-page-content h2 {
+  margin-top: 44px !important;
+  margin-bottom: 18px !important;
+}
+
+/* Первый заголовок не отталкиваем слишком сильно */
+.notion-page-content article > h1:first-child,
+.notion-page-content article > h2:first-child {
+  margin-top: 0 !important;
+}
+
+/* Подзаголовки */
+.notion-page-content h3 {
+  margin-top: 28px !important;
+  margin-bottom: 12px !important;
+}
+
+/* Обычный текст плотнее */
+.notion-page-content .notion-text {
+  margin-top: 4px !important;
+  margin-bottom: 8px !important;
+}
+
+/* Списки аккуратнее */
+.notion-page-content ul,
+.notion-page-content ol {
+  margin-top: 8px !important;
+  margin-bottom: 14px !important;
+}
+
+/* Пункты списка не разъезжаются */
+.notion-page-content li {
+  margin-top: 4px !important;
+  margin-bottom: 4px !important;
+}
+
+/* Картинки как на главной */
+.notion-page-content .notion-image,
+.notion-page-content .notion-asset-wrapper,
+.notion-page-content figure {
+  margin-top: 14px !important;
+  margin-bottom: 18px !important;
+}
+
+/* Плашки компактнее */
+.notion-callout {
+  margin-top: 8px !important;
+  margin-bottom: 8px !important;
+  padding: 12px 14px !important;
+}
+
+/* Toggle-блоки — ровнее и чуть свободнее */
+.notion-toggle {
+  margin-top: 10px !important;
+  margin-bottom: 10px !important;
+  padding-top: 4px !important;
+  padding-bottom: 4px !important;
+}
+
+/* Пустые блоки Notion не должны создавать огромные дыры */
+.notion-blank {
+  min-height: 8px !important;
+  height: 8px !important;
+}
+
+/* Мобильная версия */
+@media (max-width: 768px) {
+  .notion-page-content article > * {
+    margin-top: 8px !important;
+    margin-bottom: 8px !important;
+  }
+
+  .notion-page-content h1,
+  .notion-page-content h2 {
+    margin-top: 34px !important;
+    margin-bottom: 14px !important;
+  }
+
+  .notion-page-content h3 {
+    margin-top: 24px !important;
+    margin-bottom: 10px !important;
+  }
+
+  .notion-page-content .notion-image,
+  .notion-page-content .notion-asset-wrapper,
+  .notion-page-content figure {
+    margin-top: 10px !important;
+    margin-bottom: 12px !important;
+  }
+
+  .notion-callout {
+    margin-top: 6px !important;
+    margin-bottom: 6px !important;
+    padding: 10px 12px !important;
+  }
+
+  .notion-blank {
+    min-height: 6px !important;
+    height: 6px !important;
+  }
+}
