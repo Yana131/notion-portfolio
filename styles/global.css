@@ -1,6 +1,6 @@
-/* =========================
-   Base
-========================= */
+/* ===============================
+   BASE
+================================ */
 * {
   box-sizing: border-box;
 }
@@ -12,21 +12,17 @@ html {
 }
 
 body {
-  --notion-font: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
-    'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
-    'Droid Sans', 'Helvetica Neue', 'Noto Sans', sans-serif;
-
   padding: 0;
   margin: 0;
   overflow-x: hidden;
   background: #ffffff;
-  color: #1f1f1f;
+  color: #1d1d1d;
+  --notion-font: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+    'Droid Sans', 'Helvetica Neue', 'Noto Sans', sans-serif;
   font-family: var(--notion-font);
 }
 
-/* =========================
-   Links
-========================= */
 a,
 a:link,
 a:visited,
@@ -42,17 +38,28 @@ a:focus-visible,
   -webkit-tap-highlight-color: transparent !important;
 }
 
-.notion a {
-  color: #f38b18 !important;
+/* ===============================
+   SCROLLBAR
+================================ */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  background-color: var(--bg-color-1, #f5f5f5);
 }
 
-.notion a:hover {
-  color: #e07d12 !important;
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+  background-color: var(--fg-color-1, #555);
 }
 
-/* =========================
-   Page background and text
-========================= */
+::-webkit-scrollbar-track {
+  background-color: var(--bg-color, #ffffff);
+}
+
+/* ===============================
+   NOTION BACKGROUND / COLORS
+================================ */
 .notion,
 .notion-app,
 .notion-frame {
@@ -69,7 +76,14 @@ a:focus-visible,
   color: #1d1d1d !important;
 }
 
-/* Gray Notion text */
+.notion a {
+  color: #f38b18 !important;
+}
+
+.notion a:hover {
+  color: #e07d12 !important;
+}
+
 .notion-gray,
 .notion .notion-gray,
 .notion-page .notion-gray,
@@ -78,34 +92,33 @@ span.notion-gray {
   color: #8b8b8b !important;
 }
 
-/* Light blue Notion color override */
 .notion-blue {
   color: #e3e3e3 !important;
 }
 
-/* Gray line: B2B, B2C, FoodTech */
+/* Серый цвет для строки B2B, B2C, FoodTech */
 .notion-page-content > article > div:nth-of-type(3),
 .notion-page-content > article > div:nth-of-type(3) * {
   color: #8a8f98 !important;
 }
 
-/* =========================
-   Hide default Notion elements
-========================= */
+/* ===============================
+   HIDE DEFAULT NOTION ELEMENTS
+================================ */
 .search,
-.search-button,
+.github-corner,
 .searchInput,
+.search-button,
 .notion-search,
 .notion-search-button,
-.github-corner,
-.notion-header,
-.notion-page-title-text {
+.notion-page-title-text,
+.notion-header {
   display: none !important;
 }
 
-/* =========================
-   Avatar and title
-========================= */
+/* ===============================
+   AVATAR / HERO ICON
+================================ */
 .notion-page-icon,
 .notion-page-icon img,
 .notion-page-icon span,
@@ -118,10 +131,10 @@ span.notion-gray {
 }
 
 .notion-page-icon,
-.notion-page-icon-image,
-.notion-page-icon-hero,
 .notion-title,
-.notion-title-text {
+.notion-title-text,
+.notion-page-icon-image,
+.notion-page-icon-hero {
   margin-left: 0 !important;
   margin-right: auto !important;
   text-align: left !important;
@@ -147,9 +160,9 @@ span.notion-gray {
   margin-top: 0 !important;
 }
 
-/* =========================
-   Images and galleries
-========================= */
+/* ===============================
+   IMAGES / GALLERIES
+================================ */
 .notion-asset-wrapper,
 .notion-asset-wrapper-image,
 .notion-image,
@@ -180,9 +193,9 @@ span.notion-gray {
   }
 }
 
-/* =========================
-   Text spacing
-========================= */
+/* ===============================
+   TEXT / SPACING
+================================ */
 .notion-page-content .notion-text {
   margin-top: 4px !important;
   margin-bottom: 8px !important;
@@ -194,9 +207,7 @@ span.notion-gray {
   margin-bottom: 12px !important;
 }
 
-/* =========================
-   About section callouts
-========================= */
+/* Плашки в разделе Обо мне */
 .notion-callout {
   margin: 4px 0 !important;
   padding: 10px 12px !important;
@@ -210,38 +221,15 @@ span.notion-gray {
   display: none !important;
 }
 
-/* =========================
-   Experience toggles
-========================= */
+/* Опыт работы */
 .notion-toggle {
   margin-top: 10px !important;
   margin-bottom: 10px !important;
-  padding-top: 4px !important;
-  padding-bottom: 4px !important;
 }
 
-/* =========================
-   Scrollbar
-========================= */
-::-webkit-scrollbar {
-  width: 5px;
-  height: 5px;
-  background-color: var(--bg-color-1, #f5f5f5);
-}
-
-::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  background-color: var(--fg-color-1, #555);
-}
-
-::-webkit-scrollbar-track {
-  background-color: var(--bg-color, #ffffff);
-}
-
-/* =========================
-   Static tweet
-========================= */
+/* ===============================
+   TWEETS / STATIC EMBEDS
+================================ */
 .static-tweet blockquote {
   margin: 0;
   margin-block-start: 0;
@@ -255,9 +243,14 @@ span.notion-gray {
   width: 1.2em !important;
 }
 
-/* =========================
-   Mobile
-========================= */
+.searchInput {
+  color: var(--fg-color);
+  caret-color: var(--fg-color);
+}
+
+/* ===============================
+   MOBILE
+================================ */
 @media (max-width: 768px) {
   .notion-page-icon-hero {
     width: 104px !important;
@@ -286,7 +279,7 @@ span.notion-gray {
     height: auto !important;
   }
 
-  .notion-asset-wrapper > div[style*='height:320px'] {
+  .notion-asset-wrapper > div[style*="height:320px"] {
     height: auto !important;
   }
 
@@ -305,608 +298,6 @@ span.notion-gray {
 
   .notion-callout {
     margin: 3px 0 !important;
-    padding: 9px 10px !important;
+    padding: 9px 11px !important;
   }
-}.notion a,
-.notion-page a {
-  color: inherit;
-  text-decoration: none !important;
-  outline: none !important;
-  -webkit-tap-highlight-color: transparent !important;
-}
-
-.notion a {
-  color: #f38b18 !important;
-}
-
-.notion a:hover {
-  color: #e07d12 !important;
-}
-
-/* ==============================
-   Notion base
-============================== */
-.notion,
-.notion-app,
-.notion-frame {
-  background: #ffffff !important;
-}
-
-.notion-page {
-  background: transparent !important;
-  text-align: left !important;
-}
-
-.notion,
-.notion * {
-  color: #1d1d1d !important;
-}
-
-/* серые тексты Notion */
-.notion-gray,
-.notion .notion-gray,
-.notion-page .notion-gray,
-.notion-text .notion-gray,
-span.notion-gray {
-  color: #8b8b8b !important;
-}
-
-.notion-blue {
-  color: #e3e3e3 !important;
-}
-
-/* строка B2B, B2C, FoodTech */
-.notion-page-content > article > div:nth-of-type(3),
-.notion-page-content > article > div:nth-of-type(3) * {
-  color: #8a8f98 !important;
-}
-
-/* ==============================
-   Hide service elements
-============================== */
-.search,
-.github-corner,
-.notion-header,
-.notion-page-title-text,
-.searchInput,
-.search-button,
-.notion-search,
-.notion-search-button {
-  display: none !important;
-}
-
-/* ==============================
-   Page title / avatar
-============================== */
-.notion-page-icon,
-.notion-title,
-.notion-title-text {
-  margin-left: 0 !important;
-  margin-right: auto !important;
-  text-align: left !important;
-}
-
-.notion-title {
-  margin-top: 0 !important;
-}
-
-.notion-page-icon,
-.notion-page-icon img,
-.notion-page-icon span,
-.notion-page-icon-image,
-.notion-page-icon-hero {
-  background: transparent !important;
-  box-shadow: none !important;
-  filter: none !important;
-  border: none !important;
-}
-
-.notion-page-icon,
-.notion-page-icon-image,
-.notion-page-icon-hero {
-  margin-left: 0 !important;
-  margin-right: auto !important;
-}
-
-.notion-page-icon {
-  display: block !important;
-}
-
-.notion-page-icon-hero {
-  position: static !important;
-  left: auto !important;
-  display: flex !important;
-  justify-content: flex-start !important;
-  width: 124px !important;
-  height: 124px !important;
-  max-width: 124px !important;
-  max-height: 124px !important;
-  margin-bottom: 18px !important;
-}
-
-.notion-page-icon-hero + h1 {
-  margin-top: 24px !important;
-}
-
-/* ==============================
-   Typography / spacing
-============================== */
-.notion-page-content .notion-text {
-  margin-top: 4px !important;
-  margin-bottom: 8px !important;
-}
-
-.notion-page-content h1,
-.notion-page-content h2,
-.notion-page-content h3 {
-  margin-bottom: 12px !important;
-}
-
-/* Опыт работы */
-.notion-toggle {
-  margin-top: 8px !important;
-  margin-bottom: 8px !important;
-}
-
-/* Плашки в разделе «Обо мне» */
-.notion-callout {
-  margin: 4px 0 !important;
-  padding: 10px 12px !important;
-}
-
-.notion-callout + .notion-callout {
-  margin-top: 2px !important;
-}
-
-.notion-callout + .notion-blank {
-  display: none !important;
-}
-
-/* ==============================
-   Images / galleries
-============================== */
-.notion-gallery,
-.notion-gallery-grid {
-  gap: 8px !important;
-}
-
-.notion-asset-wrapper,
-.notion-asset-wrapper-image,
-.notion-image,
-.notion-image img {
-  border-radius: 20px !important;
-  overflow: hidden !important;
-}
-
-.notion-image,
-.notion-asset-wrapper,
-.notion-page-content .notion-image,
-.notion-page-content figure {
-  margin-top: 8px !important;
-  margin-bottom: 8px !important;
-  transition: transform 0.25s ease, opacity 0.25s ease;
-}
-
-@media (min-width: 769px) {
-  .notion-page-content .notion-image:hover,
-  .notion-page-content .notion-asset-wrapper:hover,
-  .notion-page-content figure:hover {
-    transform: translateY(-3px);
-  }
-}
-
-/* ==============================
-   Mobile
-============================== */
-@media (max-width: 768px) {
-  .notion-page-icon-hero {
-    width: 104px !important;
-    height: 104px !important;
-    max-width: 104px !important;
-    max-height: 104px !important;
-    margin-bottom: 16px !important;
-  }
-
-  .notion-page-icon-hero img,
-  img.notion-page-icon {
-    width: 100% !important;
-    height: 100% !important;
-    max-width: 100% !important;
-    max-height: 100% !important;
-    object-fit: contain !important;
-  }
-
-  .notion-image,
-  .notion-image img,
-  .notion-asset-wrapper-image,
-  .notion-asset-wrapper,
-  .notion-page img {
-    max-width: 100% !important;
-    width: auto !important;
-    height: auto !important;
-  }
-
-  .notion-asset-wrapper > div[style*="height:320px"] {
-    height: auto !important;
-  }
-
-  .notion-asset-wrapper img {
-    height: auto !important;
-    object-fit: contain !important;
-  }
-
-  .notion-page-content .notion-image,
-  .notion-page-content .notion-asset-wrapper,
-  .notion-page-content figure {
-    margin-top: 2px !important;
-    margin-bottom: 2px !important;
-    transform: none !important;
-  }
-}
-
-/* ==============================
-   Scrollbar
-============================== */
-::-webkit-scrollbar {
-  width: 5px;
-  height: 5px;
-  background-color: var(--bg-color-1, #f5f5f5);
-}
-
-::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  background-color: var(--fg-color-1, #555);
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-}
-
-::-webkit-scrollbar-track {
-  background-color: var(--bg-color, #ffffff);
-}
-
-/* ==============================
-   Static tweet
-============================== */
-.static-tweet blockquote {
-  margin: 0;
-  margin-block-start: 0;
-  margin-block-end: 0;
-  margin-inline-start: 0;
-  margin-inline-end: 0;
-}
-
-.static-tweet-emoji {
-  height: 1.2em !important;
-  width: 1.2em !important;
-}
-
-.searchInput {
-  color: var(--fg-color);
-  caret-color: var(--fg-color);
-}}
-
-.searchInput {
-  color: var(--fg-color);
-  caret-color: var(--fg-color);
-}
-
-::-webkit-scrollbar
-{
-  width: 5px;
-  height: 5px;
-  background-color: #F5F5F5;
-  background-color: var(--bg-color-1);
-}
-
-::-webkit-scrollbar-thumb
-{
-  border-radius: 10px;
-  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-  background-color: #555;
-  border-radius: 10px;
-  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-  background-color: var(--fg-color-1);
-}
-
-::-webkit-scrollbar-track {           
-    background-color: var(--bg-color);
-}
-.notion,
-.notion-app,
-.notion-frame {
-  background: #ffffff !important;
-}
-
-.notion-page {
-  background: transparent !important;
-}
-.notion {
-  color: #1D1D1D !important;
-}
-
-.notion * {
-  color: #1D1D1D !important;
-}
-.notion a {
-  color: #F38B18 !important;
-}
-
-.notion a:hover {
-  color: #E07D12 !important;
-}
-.search {
-  display: none !important;
-}
-.github-corner {
-  display: none !important;
-}
-.notion-page-title-text {
-  display: none !important;
-}
-.searchInput,
-.search-button,
-.notion-search,
-.notion-search-button {
-  display: none !important;
-}
-.notion-asset-wrapper,
-.notion-asset-wrapper-image,
-.notion-image,
-.notion-image img {
-  border-radius: 20px !important;
-  overflow: hidden !important;
-}
-/* убрать верхний header */
-.notion-header {
-  display: none !important;
-}
-
-/* убрать github corner */
-.github-corner {
-  display: none !important;
-}
-/* убрать тень у аватара */
-.notion-page-icon img,
-.notion-page-icon {
-    box-shadow: none !important;
-    filter: none !important;
-}
-/* убрать тень у аватара */
-.notion-page-icon,
-.notion-page-icon img {
-  box-shadow: none !important;
-  filter: none !important;
-}
-
-/* вернуть заголовок и аватар влево */
-.notion-page-icon,
-.notion-title,
-.notion-title-text {
-  margin-left: 0 !important;
-  margin-right: auto !important;
-  text-align: left !important;
-}
-
-.notion-page {
-  text-align: left !important;
-}
-/* аватар */
-.notion-page-icon,
-.notion-page-icon img,
-.notion-page-icon span,
-.notion-page-icon-image {
-  background: transparent !important;
-  box-shadow: none !important;
-  filter: none !important;
-  border: none !important;
-}
-.notion-page-icon {
-  margin-left: 0 !important;
-  margin-right: auto !important;
-  display: block !important;
-}
-
-.notion-page-icon-image {
-  margin-left: 0 !important;
-  margin-right: auto !important;
-}
-.notion-page-icon-hero {
-    margin-left: 0 !important;
-    margin-right: auto !important;
-}
-
-.notion-page-icon-hero + h1 {
-    margin-top: 24px;
-}
-.notion-page-icon-hero {
-    position: static !important;
-    left: auto !important;
-    justify-content: flex-start !important;
-    display: flex !important;
-    width: fit-content !important;
-}
-.notion-blue {
-    color: #E3E3E3 !important;
-}
-@media (max-width: 768px) {
-
-  .notion-image,
-  .notion-image img,
-  .notion-asset-wrapper-image,
-  .notion-asset-wrapper {
-    max-width: 100% !important;
-    width: auto !important;
-    height: auto !important;
-  }
-
-  .notion-page img {
-    max-width: 100% !important;
-    height: auto !important;
-  }
-
-}
-/* финальные правки */
-a,
-a:link,
-a:visited,
-a:hover,
-a:active,
-a:focus,
-a:focus-visible,
-.notion a,
-.notion-page a {
-  text-decoration: none !important;
-  outline: none !important;
-  -webkit-tap-highlight-color: transparent !important;
-}
-
-.notion-gray {
-  color: #8B8B8B !important;
-}
-
-/* аватар на десктопе */
-.notion-page-icon-hero {
-  width: 124px !important;
-  height: 124px !important;
-  max-width: 124px !important;
-  max-height: 124px !important;
-  position: static !important;
-  left: auto !important;
-}
-
-/* аватар на мобилке */
-@media (max-width: 768px) {
-  .notion-page-icon-hero {
-    width: 104px !important;
-    height: 104px !important;
-    max-width: 104px !important;
-    max-height: 104px !important;
-  }
-
-  .notion-page-icon-hero img,
-  img.notion-page-icon {
-    width: 100% !important;
-    height: 100% !important;
-    max-width: 100% !important;
-    max-height: 100% !important;
-    object-fit: contain !important;
-  }
-
-  .notion-asset-wrapper > div[style*="height:320px"] {
-    height: auto !important;
-  }
-
-  .notion-asset-wrapper img {
-    height: auto !important;
-    object-fit: contain !important;
-  }
-}
-.notion .notion-gray,
-.notion-page .notion-gray,
-.notion-text .notion-gray,
-span.notion-gray {
-  color: #8B8B8B !important;
-}
-.notion-page-icon-hero {
-  margin-bottom: 18px !important;
-}
-
-.notion-title {
-  margin-top: 0 !important;
-}
-
-@media (max-width:768px){
-  .notion-page-icon-hero{
-    margin-bottom:16px !important;
-  }
-}
-/* Серый цвет для строки B2B, B2C, FoodTech */
-.notion-page-content > article > div:nth-of-type(3),
-.notion-page-content > article > div:nth-of-type(3) * {
-  color: #8A8F98 !important;
-}
-/* Уменьшаем расстояние между картинками в галереях */
-.notion-gallery {
-  gap: 12px !important;
-}
-
-.notion-gallery-grid {
-  gap: 12px !important;
-}
-/* Еще компактнее */
-.notion-gallery,
-.notion-gallery-grid {
-  gap: 8px !important;
-}
-/* Уменьшаем вертикальный отступ между изображениями */
-.notion-image,
-.notion-asset-wrapper,
-.notion-page-content .notion-image {
-  margin-top: 8px !important;
-  margin-bottom: 8px !important;
-}
-/* На телефоне делаем картинки еще ближе друг к другу */
-@media (max-width: 768px) {
-  .notion-page-content .notion-image,
-  .notion-page-content .notion-asset-wrapper,
-  .notion-page-content figure {
-    margin-top: 2px !important;
-    margin-bottom: 2px !important;
-  }
-}
-/* Плавность на сайте */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Более аккуратные отступы между текстовыми блоками */
-.notion-page-content .notion-text {
-  margin-top: 4px !important;
-  margin-bottom: 8px !important;
-}
-
-/* Заголовки чуть плотнее к следующему тексту */
-.notion-page-content h1,
-.notion-page-content h2,
-.notion-page-content h3,
-.notion-page-content .notion-header {
-  margin-bottom: 12px !important;
-}
-
-/* Легкая анимация карточек/картинок */
-.notion-page-content .notion-image,
-.notion-page-content .notion-asset-wrapper,
-.notion-page-content figure {
-  transition: transform 0.25s ease, opacity 0.25s ease;
-}
-
-/* На ПК — легкое поднятие при наведении */
-@media (min-width: 769px) {
-  .notion-page-content .notion-image:hover,
-  .notion-page-content .notion-asset-wrapper:hover,
-  .notion-page-content figure:hover {
-    transform: translateY(-3px);
-  }
-}
-
-/* На телефоне hover не нужен */
-@media (max-width: 768px) {
-  .notion-page-content .notion-image:hover,
-  .notion-page-content .notion-asset-wrapper:hover,
-  .notion-page-content figure:hover {
-    transform: none;
-  }
-}
-/* Плашки в разделе "Обо мне" — делаем ближе друг к другу */
-.notion-callout {
-  margin-top: 8px !important;
-  margin-bottom: 8px !important;
-}
-/* Опыт работы — больше расстояния между раскрывающимися пунктами */
-.notion-toggle {
-  margin-top: 8px !important;
-  margin-bottom: 8px !important;
-}
-/* Убираем пустые блоки между callout-плашками */
-.notion-callout + .notion-blank {
-  display: none !important;
 }
