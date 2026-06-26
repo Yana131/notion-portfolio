@@ -252,3 +252,22 @@ a:focus-visible,
     object-fit: contain !important;
   }
 }
+.notion .notion-gray,
+.notion-page .notion-gray,
+.notion-text .notion-gray,
+span.notion-gray {
+  color: #8B8B8B !important;
+}
+.notion-page-icon-hero {
+  margin-bottom: 18px !important;
+}
+
+.notion-title {
+  margin-top: 0 !important;
+}
+
+@media (max-width:768px){
+  .notion-page-icon-hero{
+    margin-bottom:16px !important;
+  }
+}
