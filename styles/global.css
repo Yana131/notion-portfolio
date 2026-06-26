@@ -179,3 +179,20 @@ color: #1f1f1f;
 .notion-blue {
     color: #E3E3E3 !important;
 }
+@media (max-width: 768px) {
+
+  .notion-image,
+  .notion-image img,
+  .notion-asset-wrapper-image,
+  .notion-asset-wrapper {
+    max-width: 100% !important;
+    width: auto !important;
+    height: auto !important;
+  }
+
+  .notion-page img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+}
