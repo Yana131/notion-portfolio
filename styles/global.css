@@ -276,3 +276,11 @@ span.notion-gray {
 .notion-page-content > article > div:nth-of-type(3) * {
   color: #8A8F98 !important;
 }
+/* Уменьшаем расстояние между картинками в галереях */
+.notion-gallery {
+  gap: 12px !important;
+}
+
+.notion-gallery-grid {
+  gap: 12px !important;
+}
