@@ -248,3 +248,13 @@ a:focus-visible {
     object-fit: contain !important;
   }
 }
+a,
+a:link,
+a:visited,
+a:hover,
+a:active,
+a:focus {
+  text-decoration: none !important;
+  -webkit-tap-highlight-color: transparent;
+  outline: none !important;
+}
