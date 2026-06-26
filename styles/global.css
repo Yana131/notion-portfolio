@@ -225,12 +225,16 @@ a:focus-visible {
   }
 }
 @media (max-width: 768px) {
-  .notion-asset-wrapper {
-    margin-top: 16px !important;
-    margin-bottom: 16px !important;
+  .notion-page-icon-hero {
+    width: 96px !important;
+    height: 96px !important;
+    left: 0 !important;
+    margin-bottom: 24px !important;
   }
 
-  .notion-column-list {
-    gap: 16px !important;
+  .notion-page-icon-hero img,
+  .notion-page-icon {
+    width: 100% !important;
+    height: 100% !important;
   }
 }
