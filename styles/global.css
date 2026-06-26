@@ -258,3 +258,19 @@ a:focus {
   -webkit-tap-highlight-color: transparent;
   outline: none !important;
 }
+.notion-gray {
+  color: #8B8B8B !important;
+}
+a,
+a:focus,
+a:active,
+.notion a,
+.notion-page a {
+  text-decoration: none !important;
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent !important;
+}
+
+a::-moz-focus-inner {
+  border: 0;
+}
