@@ -408,3 +408,21 @@ span.notion-gray {
     height: 3px !important;
   }
 }
+/* Компактные списки в кейсах */
+.notion-page-content ul,
+.notion-page-content ol {
+  margin: 8px 0 !important;
+  padding-left: 22px !important;
+}
+
+.notion-page-content li {
+  margin: 2px 0 !important;
+  padding: 0 !important;
+  line-height: 1.6 !important;
+}
+
+/* Если внутри li лежит блок Notion, убираем его отступы */
+.notion-page-content li > div,
+.notion-page-content li .notion-text {
+  margin: 0 !important;
+}
