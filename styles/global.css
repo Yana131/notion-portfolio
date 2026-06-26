@@ -1,28 +1,298 @@
+/* ==============================
+   Base
+============================== */
 * {
   box-sizing: border-box;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-body,
 html {
   padding: 0;
   margin: 0;
+  scroll-behavior: smooth;
 }
 
 body {
   --notion-font: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
     'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
     'Droid Sans', 'Helvetica Neue', 'Noto Sans', sans-serif;
-  font-family: var(--notion-font);
+
+  padding: 0;
+  margin: 0;
   overflow-x: hidden;
-background: #ffffff;
-color: #1f1f1f;
+  background: #ffffff;
+  color: #1d1d1d;
+  font-family: var(--notion-font);
 }
 
+/* ==============================
+   Links
+============================== */
+a,
+a:link,
+a:visited,
+a:hover,
+a:active,
+a:focus,
+a:focus-visible,
+.notion a,
+.notion-page a {
+  color: inherit;
+  text-decoration: none !important;
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent !important;
+}
+
+.notion a {
+  color: #f38b18 !important;
+}
+
+.notion a:hover {
+  color: #e07d12 !important;
+}
+
+/* ==============================
+   Notion base
+============================== */
+.notion,
+.notion-app,
+.notion-frame {
+  background: #ffffff !important;
+}
+
+.notion-page {
+  background: transparent !important;
+  text-align: left !important;
+}
+
+.notion,
+.notion * {
+  color: #1d1d1d !important;
+}
+
+/* серые тексты Notion */
+.notion-gray,
+.notion .notion-gray,
+.notion-page .notion-gray,
+.notion-text .notion-gray,
+span.notion-gray {
+  color: #8b8b8b !important;
+}
+
+.notion-blue {
+  color: #e3e3e3 !important;
+}
+
+/* строка B2B, B2C, FoodTech */
+.notion-page-content > article > div:nth-of-type(3),
+.notion-page-content > article > div:nth-of-type(3) * {
+  color: #8a8f98 !important;
+}
+
+/* ==============================
+   Hide service elements
+============================== */
+.search,
+.github-corner,
+.notion-header,
+.notion-page-title-text,
+.searchInput,
+.search-button,
+.notion-search,
+.notion-search-button {
+  display: none !important;
+}
+
+/* ==============================
+   Page title / avatar
+============================== */
+.notion-page-icon,
+.notion-title,
+.notion-title-text {
+  margin-left: 0 !important;
+  margin-right: auto !important;
+  text-align: left !important;
+}
+
+.notion-title {
+  margin-top: 0 !important;
+}
+
+.notion-page-icon,
+.notion-page-icon img,
+.notion-page-icon span,
+.notion-page-icon-image,
+.notion-page-icon-hero {
+  background: transparent !important;
+  box-shadow: none !important;
+  filter: none !important;
+  border: none !important;
+}
+
+.notion-page-icon,
+.notion-page-icon-image,
+.notion-page-icon-hero {
+  margin-left: 0 !important;
+  margin-right: auto !important;
+}
+
+.notion-page-icon {
+  display: block !important;
+}
+
+.notion-page-icon-hero {
+  position: static !important;
+  left: auto !important;
+  display: flex !important;
+  justify-content: flex-start !important;
+  width: 124px !important;
+  height: 124px !important;
+  max-width: 124px !important;
+  max-height: 124px !important;
+  margin-bottom: 18px !important;
+}
+
+.notion-page-icon-hero + h1 {
+  margin-top: 24px !important;
+}
+
+/* ==============================
+   Typography / spacing
+============================== */
+.notion-page-content .notion-text {
+  margin-top: 4px !important;
+  margin-bottom: 8px !important;
+}
+
+.notion-page-content h1,
+.notion-page-content h2,
+.notion-page-content h3 {
+  margin-bottom: 12px !important;
+}
+
+/* Опыт работы */
+.notion-toggle {
+  margin-top: 8px !important;
+  margin-bottom: 8px !important;
+}
+
+/* Плашки в разделе «Обо мне» */
+.notion-callout {
+  margin: 4px 0 !important;
+  padding: 10px 12px !important;
+}
+
+.notion-callout + .notion-callout {
+  margin-top: 2px !important;
+}
+
+.notion-callout + .notion-blank {
+  display: none !important;
+}
+
+/* ==============================
+   Images / galleries
+============================== */
+.notion-gallery,
+.notion-gallery-grid {
+  gap: 8px !important;
+}
+
+.notion-asset-wrapper,
+.notion-asset-wrapper-image,
+.notion-image,
+.notion-image img {
+  border-radius: 20px !important;
+  overflow: hidden !important;
+}
+
+.notion-image,
+.notion-asset-wrapper,
+.notion-page-content .notion-image,
+.notion-page-content figure {
+  margin-top: 8px !important;
+  margin-bottom: 8px !important;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+@media (min-width: 769px) {
+  .notion-page-content .notion-image:hover,
+  .notion-page-content .notion-asset-wrapper:hover,
+  .notion-page-content figure:hover {
+    transform: translateY(-3px);
+  }
+}
+
+/* ==============================
+   Mobile
+============================== */
+@media (max-width: 768px) {
+  .notion-page-icon-hero {
+    width: 104px !important;
+    height: 104px !important;
+    max-width: 104px !important;
+    max-height: 104px !important;
+    margin-bottom: 16px !important;
+  }
+
+  .notion-page-icon-hero img,
+  img.notion-page-icon {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+    object-fit: contain !important;
+  }
+
+  .notion-image,
+  .notion-image img,
+  .notion-asset-wrapper-image,
+  .notion-asset-wrapper,
+  .notion-page img {
+    max-width: 100% !important;
+    width: auto !important;
+    height: auto !important;
+  }
+
+  .notion-asset-wrapper > div[style*="height:320px"] {
+    height: auto !important;
+  }
+
+  .notion-asset-wrapper img {
+    height: auto !important;
+    object-fit: contain !important;
+  }
+
+  .notion-page-content .notion-image,
+  .notion-page-content .notion-asset-wrapper,
+  .notion-page-content figure {
+    margin-top: 2px !important;
+    margin-bottom: 2px !important;
+    transform: none !important;
+  }
+}
+
+/* ==============================
+   Scrollbar
+============================== */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  background-color: var(--bg-color-1, #f5f5f5);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: var(--fg-color-1, #555);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--bg-color, #ffffff);
+}
+
+/* ==============================
+   Static tweet
+============================== */
 .static-tweet blockquote {
   margin: 0;
   margin-block-start: 0;
@@ -35,6 +305,11 @@ color: #1f1f1f;
   height: 1.2em !important;
   width: 1.2em !important;
 }
+
+.searchInput {
+  color: var(--fg-color);
+  caret-color: var(--fg-color);
+}}
 
 .searchInput {
   color: var(--fg-color);
