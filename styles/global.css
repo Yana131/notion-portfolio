@@ -271,3 +271,8 @@ span.notion-gray {
     margin-bottom:16px !important;
   }
 }
+/* Серый цвет для строки B2B, B2C, FoodTech */
+.notion-page-content > article > div:nth-of-type(3),
+.notion-page-content > article > div:nth-of-type(3) * {
+  color: #8A8F98 !important;
+}
