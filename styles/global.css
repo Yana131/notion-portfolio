@@ -358,3 +358,7 @@ html {
   margin-top: 8px !important;
   margin-bottom: 8px !important;
 }
+/* Убираем пустые блоки между callout-плашками */
+.notion-callout + .notion-blank {
+  display: none !important;
+}
