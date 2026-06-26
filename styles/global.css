@@ -414,3 +414,16 @@ span.notion-gray {
     height: 6px !important;
   }
 }
+/* Навигация в кейсе — убираем лишний воздух между ссылками */
+.notion-page-content a,
+.notion-page-content .notion-link {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.notion-page-content .notion-text:has(a) {
+  margin-top: 2px !important;
+  margin-bottom: 2px !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
